@@ -1,0 +1,101 @@
+id,A,B,Subtype,WHO grade,Primary/Recurrent
+3744,GSM96950,GSM97050,Mes,IV with necrosis,primary
+3745,GSM96951,GSM97051,Mes,IV with necrosis,primary
+3746,GSM96952,GSM97052,Mes,IV with necrosis,primary
+3747,GSM96953,GSM97053,PN,IV with necrosis,primary
+3748,GSM96954,GSM97054,Prolif,IV with necrosis,primary
+3749,GSM96955,GSM97055,PN,IV with necrosis,primary
+3751,GSM96956,GSM97056,PN,IV,recurrent
+3752,GSM96957,GSM97057,Mes,IV,recurrent
+3753,GSM96958,GSM97058,Mes,IV with necrosis,primary
+3754,GSM96959,GSM97059,Prolif,IV with necrosis,primary
+3755,GSM96960,GSM97060,Mes,IV,recurrent
+3756,GSM96961,GSM97061,Mes,IV with necrosis,primary
+3757,GSM96962,GSM97062,Prolif,IV with necrosis,primary
+3758,GSM96963,GSM97063,PN,IV with necrosis,primary
+3759,GSM96964,GSM97064,Mes,IV with necrosis,primary
+3774,GSM96965,GSM97065,Mes,IV with necrosis,primary
+3775,GSM96966,GSM97066,Prolif,IV with necrosis,primary
+3776,GSM96967,GSM97067,Mes,IV with necrosis,primary
+3777,GSM96968,GSM97068,Prolif,IV,recurrent
+3778,GSM96969,GSM97069,Prolif,IV with necrosis,primary
+3779,GSM96970,GSM97070,Prolif,IV with necrosis,primary
+3780,GSM96971,GSM97071,Prolif,IV,recurrent
+3781,GSM96972,GSM97072,Prolif,IV with necrosis,primary
+3782,GSM96973,GSM97073,Prolif,IV with necrosis,primary
+3784,GSM96974,GSM97074,Prolif,IV with necrosis,primary
+3785,GSM96975,GSM97075,Mes,IV,recurrent
+3786,GSM96976,GSM97076,Prolif,IV with necrosis,primary
+3825,GSM96977,GSM97077,Prolif,IV with necrosis,primary
+3826,GSM96978,GSM97078,Prolif,IV with necrosis,primary
+3827,GSM96979,GSM97079,Prolif,IV with necrosis,primary
+3830,GSM96980,GSM97080,Mes,IV with necrosis,primary
+3832,GSM96981,GSM97081,Mes,IV with necrosis,primary
+3833,GSM96982,GSM97082,Mes,IV with necrosis,primary
+3834,GSM96983,GSM97083,Prolif,IV with necrosis,primary
+3836,GSM96984,GSM97084,Prolif,IV with necrosis,primary
+3839,GSM96985,GSM97085,Prolif,IV with necrosis,primary
+3840,GSM96986,GSM97086,Prolif,IV,recurrent
+3895,GSM96987,GSM97087,Mes,IV with necrosis,primary
+3897,GSM96988,GSM97088,Mes,IV with necrosis,primary
+3899,GSM96989,GSM97089,Mes,IV with necrosis,primary
+3900,GSM96990,GSM97090,PN,IV with necrosis,primary
+3901,GSM96991,GSM97091,PN,IV with necrosis,primary
+3903,GSM96992,GSM97092,Mes,IV with necrosis,primary
+3905,GSM96993,GSM97093,Mes,IV with necrosis,primary
+3906,GSM96994,GSM97094,Prolif,IV with necrosis,primary
+3907,GSM96995,GSM97095,Prolif,IV with necrosis,primary
+3910,GSM96996,GSM97096,Prolif,IV with necrosis,primary
+4094,GSM96997,GSM97097,Prolif,IV with necrosis,primary
+4095,GSM96998,GSM97098,Mes,IV,recurrent
+4096,GSM96999,GSM97099,Mes,IV,recurrent
+4097,GSM97000,GSM97100,Mes,IV with necrosis,primary
+4098,GSM97001,GSM97101,Mes,IV,recurrent
+4102,GSM97002,GSM97102,Prolif,IV with necrosis,primary
+4103,GSM97003,GSM97103,Prolif,IV,recurrent
+4122,GSM97004,GSM97104,Mes,IV with necrosis,primary
+4123,GSM97005,GSM97105,Mes,IV,recurrent
+4124,GSM97006,GSM97106,Mes,IV,recurrent
+4125,GSM97007,GSM97107,Prolif,IV with necrosis,primary
+4126,GSM97008,GSM97108,Mes,IV with necrosis,primary
+4127,GSM97009,GSM97109,Prolif,IV with necrosis,primary
+4128,GSM97010,GSM97110,Prolif,IV with necrosis,primary
+4129,GSM97011,GSM97111,Mes,IV with necrosis,primary
+4745,GSM97012,GSM97112,PN,III,primary
+4746,GSM97013,GSM97113,Mes,III,recurrent
+4747,GSM97014,GSM97114,PN,IV without necrosis,primary
+4749,GSM97015,GSM97115,PN,III,primary
+4750,GSM97016,GSM97116,PN,III,primary
+4751,GSM97017,GSM97117,PN,III,primary
+4753,GSM97018,GSM97118,PN,IV without necrosis,primary
+4754,GSM97019,GSM97119,PN,III,primary
+4755,GSM97020,GSM97120,PN,III,primary
+4756,GSM97021,GSM97121,Mes,IV,recurrent
+4757,GSM97022,GSM97122,PN,III,primary
+4759,GSM97023,GSM97123,Mes,III,primary
+4761,GSM97024,GSM97124,PN,IV,recurrent
+4765,GSM97025,GSM97125,PN,III,primary
+4767,GSM97026,GSM97126,PN,III,primary
+4770,GSM97027,GSM97127,PN,III,primary
+4771,GSM97028,GSM97128,Mes,IV,recurrent
+4773,GSM97029,GSM97129,PN,III,recurrent
+4774,GSM97030,GSM97130,PN,III,primary
+4776,GSM97031,GSM97131,Mes,IV,recurrent
+4777,GSM97032,GSM97132,PN,IV,recurrent
+4778,GSM97033,GSM97133,PN,III,primary
+4779,GSM97034,GSM97134,PN,III,primary
+4780,GSM97035,GSM97135,PN,III,primary
+4781,GSM97036,GSM97136,PN,III,primary
+4782,GSM97037,GSM97137,PN,IV without necrosis,primary
+4783,GSM97038,GSM97138,PN,III,primary
+4784,GSM97039,GSM97139,PN,III,primary
+4785,GSM97040,GSM97140,Mes,IV without necrosis,primary
+4787,GSM97041,GSM97141,Mes,IV without necrosis,primary
+4788,GSM97042,GSM97142,PN,IV without necrosis,primary
+4790,GSM97043,GSM97143,PN,III,recurrent
+4791,GSM97044,GSM97144,PN,IV,recurrent
+4793,GSM97045,GSM97145,PN,III,primary
+5063,GSM97046,GSM97146,PN,III,primary
+5070,GSM97047,GSM97147,PN,III,primary
+9907,GSM97048,GSM97148,PN,IV with necrosis,primary
+9938,GSM97049,GSM97149,PN,IV,recurrent
