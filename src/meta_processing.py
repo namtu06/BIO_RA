@@ -1,6 +1,7 @@
 import pandas as pd
 
 general_df2 = pd.read_csv("./data/metadata.csv")
+general_df2 = general_df2.set_index("id")
 
 typeIII = general_df2[general_df2["WHO grade"].isin(["III", "III with necrosis", "III without necrosis"])]
 III_primary = typeIII[typeIII["Primary/Recurrent"] == "primary"]
