@@ -1,2 +1,4 @@
 Python: 3.13.3
-Libraries: Usual data analysis libraries (numpy, pandas, scikit-learn, etc.), and GEOParse
+Libraries: 
+    - Usual data analysis libraries
+    - GEOParse
