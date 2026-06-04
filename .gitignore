@@ -1,3 +1,4 @@
 __pycache__
 test.ipynb
 data/raw/CPTAC3_Glioblastoma_Multiforme_Proteome.peptides.tsv
+data/raw/geo/GSE4290_family.soft.gz
