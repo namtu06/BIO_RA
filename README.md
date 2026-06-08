@@ -2,6 +2,6 @@ Transcriptomics data:
   - GSE4290
 
 Proteomics data:
-  - TBA (CPTAC)
+  -   CPTAC GBM Discovery Study
 
 Look at ```./notebooks``` for latest analyses
