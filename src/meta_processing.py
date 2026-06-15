@@ -1,6 +1,6 @@
 import pandas as pd
 
-general_df2 = pd.read_csv("../data/processed/metadata.csv")
+general_df2 = pd.read_csv("../data/interim/OLD_metadata.csv")
 general_df2 = general_df2.set_index("id")
 
 labels = general_df2[general_df2["WHO grade"].isin(["III", "III with necrosis", "III without necrosis","IV", "IV with necrosis", "IV without necrosis"])]
