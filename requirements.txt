@@ -1,4 +1,5 @@
-Python: 3.13.3
+Python: 3.11
 Libraries: 
     - Usual data analysis libraries
     - GEOParse
+    - gseapy
