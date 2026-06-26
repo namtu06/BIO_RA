@@ -80,12 +80,12 @@ def volcano_plot(results, title):
     for cat in ["Not Significant", "Up", "Down"]:
 
         subset = results[
-            results["category"] == cat
+            results["category_rna"] == cat
         ]
 
         plt.scatter(
-            subset["log2FC"],
-            subset["-log(adjustedp)"],
+            subset["log2FC_rna"],
+            subset["-log(adjustedp)_rna"],
             c=colors[cat],
             label=cat,
             s=10,
