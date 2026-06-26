@@ -2,14 +2,16 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 import gseapy as gp
+import textwrap
 
 # -----------------------------
 # USER SETTINGS
 # -----------------------------
-PVAL_COLUMN = "adj.P.Val"      # change if necessary
-LOGFC_COLUMN = "logFC"         # change if necessary
-GENE_COLUMN = "Gene.symbol"    # change if necessary
+PVAL_COLUMN = "pvalue"      # change if necessary
+LOGFC_COLUMN = "log2FC"         # change if necessary
+GENE_COLUMN = "gene_name"    # change if necessary
 
 PVAL_THRESHOLD = 0.05
 LOGFC_THRESHOLD = 1          # set to 1 if you want |logFC| > 1
@@ -27,64 +29,140 @@ GO_LIBRARIES = {
 
 
 
-def run_go(gene_list, gene_set):
+def plot_go(up_results, down_results, title):
 
-    enr = gp.enrichr(
-        gene_list=gene_list,
-        gene_sets=gene_set,
-        organism="Human",
-        outdir=None
-    )
+    fig = plt.figure(figsize=(20, 12))
 
-    df = enr.results.copy()
-
-    df = df.sort_values("Adjusted P-value")
-
-    return df.head(TOP_N)
-
-
-
-def plot_go(go_results, title, outfile=None):
-
-    fig, axes = plt.subplots(
+    # More space for labels, less space for bars
+    gs = gridspec.GridSpec(
         3,
-        1,
-        figsize=(9, 12),
-        constrained_layout=True
+        5,
+        width_ratios=[0.75, 0.80, 0.75, 0.80, 0.06],
+        hspace=0.45,
+        wspace=0.02
     )
 
     colors = {
         "BP": "#355C8C",
-        "CC": "#8B4513",
-        "MF": "#556B2F"
+        "CC": "#A35A19",
+        "MF": "#5C7732"
     }
 
-    for ax, ontology in zip(axes, ["BP", "CC", "MF"]):
+    ontologies = ["BP", "CC", "MF"]
 
-        df = go_results[ontology].copy()
+    for row, ontology in enumerate(ontologies):
 
-        df = df.iloc[::-1]
+        ##############################
+        # UP
+        ##############################
 
-        df["score"] = -np.log10(df["Adjusted P-value"])
+        ax_text_up = fig.add_subplot(gs[row, 0])
+        ax_bar_up = fig.add_subplot(gs[row, 1])
 
-        ax.barh(
-            df["Term"],
-            df["score"],
-            color=colors[ontology]
+        ##############################
+        # DOWN
+        ##############################
+
+        ax_text_down = fig.add_subplot(gs[row, 2])
+        ax_bar_down = fig.add_subplot(gs[row, 3])
+
+        ##############################
+        # BP / CC / MF LABEL
+        ##############################
+
+        ax_type = fig.add_subplot(gs[row, 4])
+        ax_type.axis("off")
+
+        ax_type.text(
+            0.5,
+            0.5,
+            ontology,
+            rotation=270,
+            fontsize=18,
+            fontweight="bold",
+            ha="center",
+            va="center"
         )
 
-        ax.set_title(ontology)
+        for results, ax_text, ax_bar, heading in [
 
-        ax.set_xlabel("-log10(adj. p-value)")
+            (up_results, ax_text_up, ax_bar_up, "Upregulated"),
+            (down_results, ax_text_down, ax_bar_down, "Downregulated")
 
-    fig.suptitle(title, fontsize=18)
+        ]:
 
-    if outfile:
-        plt.savefig(outfile, dpi=300, bbox_inches="tight")
+            df = results[ontology].copy()
+
+            if df.empty:
+                ax_text.axis("off")
+                ax_bar.axis("off")
+                continue
+
+            df = df.sort_values("Adjusted P-value")
+
+            df["Term"] = (
+                df["Term"]
+                .str.replace(r"\s*\(GO:\d+\)", "", regex=True)
+                )
+
+            score = -np.log10(df["Adjusted P-value"])
+
+            y = np.arange(len(df))
+
+            ################################################
+            # LABEL COLUMN
+            ################################################
+
+            ax_text.set_xlim(0, 1)
+            ax_text.set_ylim(-0.5, len(df) - 0.5)
+            ax_text.invert_yaxis()
+
+            for yy, term in zip(y, df["Term"]):
+                ax_text.text(
+                    0.99,
+                    yy,
+                    term,
+                    ha="right",
+                    va="center",
+                    fontsize=10
+                )
+
+            ax_text.axis("off")
+
+            ################################################
+            # BAR COLUMN
+            ################################################
+
+            ax_bar.barh(
+                y,
+                score,
+                color=colors[ontology],
+                height=0.72
+            )
+
+            ax_bar.set_yticks([])
+            ax_bar.invert_yaxis()
+
+            ax_bar.set_xlabel(r"$-\log_{10}(\mathrm{Adjusted}\ p)$", fontsize=10)
+
+            if row == 0:
+                ax_bar.set_title(heading, fontsize=20)
+
+            ax_bar.spines["top"].set_visible(False)
+            ax_bar.spines["right"].set_visible(False)
+
+            # Shrink plotting area to leave whitespace like the paper
+            pos = ax_bar.get_position()
+            ax_bar.set_position([
+                pos.x0 + 0.01,
+                pos.y0,
+                pos.width * 0.78,
+                pos.height
+            ])
+
+    fig.suptitle(title, fontsize=24, fontweight="bold")
 
     plt.show()
-    
-    
 
 def analyze_subtype(csv_file, subtype_name):
 
@@ -114,13 +192,7 @@ def analyze_subtype(csv_file, subtype_name):
         down_results[ontology] = run_go(down_genes, library)
 
     plot_go(
-        up_results,
-        f"{subtype_name} (Upregulated)",
-        outfile=f"{subtype_name}_GO_UP.png"
-    )
-
-    plot_go(
-        down_results,
-        f"{subtype_name} (Downregulated)",
-        outfile=f"{subtype_name}_GO_DOWN.png"
+    up_results,
+    down_results,
+    subtype_name
     )
