@@ -25,7 +25,23 @@ GO_LIBRARIES = {
     "MF": "GO_Molecular_Function_2023"
 }
 
+def run_go(gene_list, gene_set):
 
+    if len(gene_list) == 0:
+        return pd.DataFrame()
+
+    enr = gp.enrichr(
+        gene_list=gene_list,
+        gene_sets=gene_set,
+        organism="human",
+        outdir=None
+    )
+
+    df = enr.results.copy()
+
+    df = df.sort_values("Adjusted P-value")
+
+    return df.head(TOP_N)
 
 
 
