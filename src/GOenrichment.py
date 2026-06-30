@@ -280,7 +280,12 @@ def plot_go(up_results, down_results=None, title=""):
 
     plt.show()
 
-def analyze_subtype(csv_file, subtype_name, direction="split"):
+def analyze_subtype(
+    csv_file,
+    subtype_name,
+    direction="combined",
+    gene_filter=None
+):
 
     df = pd.read_csv(csv_file)
 
@@ -290,6 +295,11 @@ def analyze_subtype(csv_file, subtype_name, direction="split"):
         (abs(df[LOGFC_COLUMN]) > LOGFC_THRESHOLD)
     ]
 
+    if gene_filter is not None:
+        sig = sig[
+        sig[GENE_COLUMN].str.upper().isin(gene_filter)
+        ]
+    
     if direction.lower() == "combined":
 
         genes = sig[GENE_COLUMN].dropna().unique().tolist()
