@@ -284,10 +284,17 @@ def analyze_subtype(
     csv_file,
     subtype_name,
     direction="combined",
-    gene_filter=None
+    gene_filter=None,
+    filter_before_significance=False
 ):
 
     df = pd.read_csv(csv_file)
+
+    if gene_filter is not None and filter_before_significance:
+        # Restrict to the shared/intersection gene universe before DE filtering.
+        df = df[
+            df[GENE_COLUMN].fillna("").str.upper().isin(gene_filter)
+        ]
 
     sig = df[
         (df[PVAL_COLUMN] < PVAL_THRESHOLD)
@@ -295,10 +302,13 @@ def analyze_subtype(
         (abs(df[LOGFC_COLUMN]) > LOGFC_THRESHOLD)
     ]
 
-    if gene_filter is not None:
+    if gene_filter is not None and not filter_before_significance:
         sig = sig[
-        sig[GENE_COLUMN].str.upper().isin(gene_filter)
+        sig[GENE_COLUMN].fillna("").str.upper().isin(gene_filter)
         ]
+    
+    print(f"\n{subtype_name}")
+    print(f"Significant genes after filtering: {len(sig)}")
     
     if direction.lower() == "combined":
 
