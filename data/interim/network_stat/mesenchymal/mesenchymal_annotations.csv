@@ -10,9 +10,9 @@ NDUFB5,,Complex I
 NDUFAF1,,Complex I
 FOXRED1,,Complex I
 NDUFS3,,Complex I
-SDHA,,Complex II;Complex I
+SDHA,,Complex I;Complex II
 NDUFA9,,Complex I
-UQCRC2,,Complex II;Complex I;Complex III
+UQCRC2,,Complex I;Complex III;Complex II
 NDUFB10,,Complex I
 ECSIT,,Complex I
 NDUFS6,,Complex I
@@ -24,18 +24,18 @@ NDUFAF2,,Complex I
 NDUFS4,,Complex I
 NDUFB8,,Complex I
 NDUFA7,,Complex I
-TMEM70,,Complex V;Complex I
+TMEM70,,Complex I;Complex V
 MT-ND5,,Complex I
 SCO2,,Complex I;Complex IV
 COX6B1,,Complex I;Complex IV
-SDHB,,Complex II;Complex I
+SDHB,,Complex I;Complex II
 ACSL1,Ferroptosis,
 ATPAF2,,Complex V
 ATPAF1,,Complex V
 NDUFA4,,Complex I;Complex IV
 SURF1,,Complex I;Complex IV
 NDUFB2,,Complex I
-BCS1L,,Complex II;Complex I;Complex III
+BCS1L,,Complex I;Complex III;Complex II
 NDUFB6,,Complex I
 NDUFA3,,Complex I
 MT-ATP6,,Complex V
@@ -71,10 +71,10 @@ TIMMDC1,,Complex I
 ACP1,,Complex I
 ACTB,Apoptosis,
 LPCAT3,Ferroptosis,
-CASP1,Necroptosis;Pyroptosis,
+CASP1,Pyroptosis;Necroptosis,
 TNFRSF1A,Apoptosis;Necroptosis,
 NGFR,Apoptosis,
-UQCRC1,,Complex II;Complex I;Complex III
+UQCRC1,,Complex I;Complex III;Complex II
 HMOX1,Ferroptosis,
 RIPK3,Necroptosis,
 NFKBIA,Apoptosis,
@@ -85,19 +85,19 @@ KRAS,Apoptosis;Autophagy,
 RIPK1,Apoptosis;Necroptosis,
 STAT3,Necroptosis,
 CASP6,Apoptosis,
-TP53,Ferroptosis;Apoptosis;Pyroptosis,
+TP53,Apoptosis;Pyroptosis;Ferroptosis,
 TNFRSF10B,Apoptosis;Necroptosis,
 IL18,Pyroptosis,
-BAX,Apoptosis;Necroptosis;Pyroptosis,
+BAX,Apoptosis;Pyroptosis;Necroptosis,
 TLR3,Necroptosis,
-SDHAF2,,Complex II;Complex I
+SDHAF2,,Complex I;Complex II
 FADD,Apoptosis;Necroptosis,
 MAP2K1,Apoptosis;Autophagy,
 ITPR1,Apoptosis;Autophagy,
 MLKL,Necroptosis,
 PRKACA,Autophagy,
 CASP3,Apoptosis;Pyroptosis,
-CFLAR,Apoptosis;Autophagy;Necroptosis,
+CFLAR,Apoptosis;Necroptosis;Autophagy,
 CASP2,Apoptosis,
 STAT2,Necroptosis,
 ULK1,Autophagy,
@@ -108,9 +108,9 @@ CTSB,Apoptosis;Autophagy,
 CASP8,Apoptosis;Necroptosis,
 STAT1,Necroptosis,
 MT-CO1,,Complex I;Complex IV
-MT-CYB,,Complex II;Complex I;Complex III
+MT-CYB,,Complex I;Complex III;Complex II
 MT-CO2,,Complex I;Complex IV
-SDHC,,Complex II;Complex I
+SDHC,,Complex I;Complex II
 LMNA,Apoptosis,
 CTSS,Apoptosis,
 MCL1,Apoptosis,
@@ -119,14 +119,14 @@ PRKACB,Autophagy,
 JUN,Apoptosis,
 ITPR3,Apoptosis,
 SLC3A2,Ferroptosis,
-CYBB,Ferroptosis;Necroptosis,
+CYBB,Necroptosis;Ferroptosis,
 IL33,Necroptosis,
-SQSTM1,Autophagy;Necroptosis,
+SQSTM1,Necroptosis;Autophagy,
 STEAP3,Ferroptosis,
-MAPK8,Apoptosis;Autophagy;Necroptosis,
+MAPK8,Apoptosis;Necroptosis;Autophagy,
 RELA,Apoptosis,
 CASP4,Pyroptosis,
-MAPK9,Apoptosis;Autophagy;Necroptosis,
+MAPK9,Apoptosis;Necroptosis;Autophagy,
 PRF1,Apoptosis,
 PRNP,Ferroptosis,
 PIK3R1,Apoptosis;Autophagy,
@@ -143,7 +143,7 @@ CTSZ,Apoptosis,
 SPTA1,Apoptosis,
 AIFM1,Apoptosis;Necroptosis,Complex I
 COX15,,Complex I;Complex IV
-TTC19,,Complex II;Complex I;Complex III
+TTC19,,Complex I;Complex III;Complex II
 GLUD1,Necroptosis,
 BAK1,Apoptosis;Pyroptosis,
 COA7,,Complex I;Complex IV
@@ -155,13 +155,13 @@ WIPI1,Autophagy,
 VMP1,Autophagy,
 COX11,,Complex I;Complex IV
 MT-ATP8,,Complex V
-UQCC1,,Complex II;Complex I;Complex III
-LYRM7,,Complex II;Complex I;Complex III
+UQCC1,,Complex I;Complex III;Complex II
+LYRM7,,Complex I;Complex III;Complex II
 DMAC2L,,
 SCO1,,Complex I;Complex IV
 COX17,,Complex I;Complex IV
-UQCR10,,Complex II;Complex I;Complex III
-SDHAF1,,Complex II;Complex I
+UQCR10,,Complex I;Complex III;Complex II
+SDHAF1,,Complex I;Complex II
 SLC25A4,Necroptosis,
 CASP10,Apoptosis,
 CAPN2,Apoptosis;Necroptosis,
@@ -172,9 +172,9 @@ COX6A1,,Complex I;Complex IV
 COX5B,,Complex I;Complex IV
 TACO1,,Complex I;Complex IV
 COX7A1,,Complex I;Complex IV
-UQCRFS1,,Complex II;Complex I;Complex III
-UQCRH,,Complex II;Complex I;Complex III
-CYC1,,Complex II;Complex I;Complex III
+UQCRFS1,,Complex I;Complex III;Complex II
+UQCRH,,Complex I;Complex III;Complex II
+CYC1,,Complex I;Complex III;Complex II
 COX5A,,Complex I;Complex IV
 COX8A,,Complex I;Complex IV
 COX19,,Complex I;Complex IV
@@ -182,18 +182,18 @@ COA3,,Complex I;Complex IV
 MT-CO3,,Complex I;Complex IV
 COA6,,Complex I;Complex IV
 COX7A2,,Complex I;Complex IV
-SDHD,,Complex II;Complex I
+SDHD,,Complex I;Complex II
 COX7A2L,,Complex I;Complex IV
-UQCRQ,,Complex II;Complex I;Complex III
+UQCRQ,,Complex I;Complex III;Complex II
 PET100,,Complex I;Complex IV
-UQCC2,,Complex II;Complex I;Complex III
+UQCC2,,Complex I;Complex III;Complex II
 COX6C,,Complex I;Complex IV
-UQCC3,,Complex II;Complex I;Complex III
+UQCC3,,Complex I;Complex III;Complex II
 COX7B,,Complex I;Complex IV
 COA4,,Complex I;Complex IV
-UQCR11,,Complex II;Complex I;Complex III
+UQCR11,,Complex I;Complex III;Complex II
 COX7C,,Complex I;Complex IV
-UQCRB,,Complex II;Complex I;Complex III
+UQCRB,,Complex I;Complex III;Complex II
 CAMK2G,Necroptosis,
 IFNGR1,Necroptosis,
 ITPR2,Apoptosis,
@@ -212,7 +212,7 @@ STAT4,Necroptosis,
 CD14,,Complex I
 CEP89,,Complex I;Complex IV
 RAB8A,Autophagy,
-CHMP2A,Necroptosis;Pyroptosis,
+CHMP2A,Pyroptosis;Necroptosis,
 CMC1,,Complex I;Complex IV
 COX14,,Complex I;Complex IV
 PET117,,Complex I;Complex IV
