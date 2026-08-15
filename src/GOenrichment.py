@@ -16,7 +16,7 @@ GENE_COLUMN = "gene_name"    # change if necessary
 PVAL_THRESHOLD = 0.05
 LOGFC_THRESHOLD = 1          # set to 1 if you want |logFC| > 1
 
-TOP_N = 10
+TOP_N = 20
 
 # GO libraries
 GO_LIBRARIES = {
