@@ -1,4 +1,4 @@
 __pycache__
 test.ipynb
 data/raw/geo/GSE4290_family.soft.gz
-data/interim/network_stat
+data/interim/network_stat/
