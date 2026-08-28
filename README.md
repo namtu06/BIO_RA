@@ -50,6 +50,15 @@ Rather than looking at differential expression alone, the project combines sever
 With home-made plotting for easier customization!
 
 DISCLAIMER: All results currently displayed for Classical Subtype only, sorry for the inconvinience
+
+# 🔍 0. Exploratory Data Analysis
+
+Initial Inspection of top 250 expressed genes, and PCA of raw gene counts
+
+<img src="https://github.com/namtu06/BIO_RA/blob/main/results/figures/expression.png" alt="Heatmap" width="430"/> <img src="https://github.com/namtu06/BIO_RA/blob/main/results/figures/TRANS_PCA.png" alt="PCA" width="500"/>
+
+Very different levels of expression, and PCA shows the 2 groups are very distinct from one another.
+
 # 🧬 1. Transcriptomic Differential Expression
 
 ```
@@ -71,7 +80,7 @@ Significantly dysregulated genes
 ```
 The differential-expression results provide the foundation for the downstream functional and network analyses.
 
-<img src="https://github.com/namtu06/BIO_RA/blob/main/results/figures/TRANS_VOLCANO.png" alt="Volcano plot" width="400"/> <img src="https://github.com/namtu06/BIO_RA/blob/main/results/figures/TRANS_PCA.png" alt="PCA" width="445"/>
+<img src="https://github.com/namtu06/BIO_RA/blob/main/results/figures/TRANS_VOLCANO.png" alt="Volcano plot" width="400"/>
 
 
 Figure: Differential expression between GBM and reference samples (Left). PCA with raw gene count (Right).
