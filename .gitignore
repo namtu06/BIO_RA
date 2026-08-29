@@ -2,5 +2,5 @@ __pycache__
 test.ipynb
 data/raw/geo/GSE4290_family.soft.gz
 data/raw/CPTAC_GBM/
-data\raw\GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
+data/raw/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
 data/interim/network_stat
