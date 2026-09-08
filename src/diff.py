@@ -88,26 +88,29 @@ def volcano_plot(results, title):
             subset["-log(adjustedp)"],
             c=colors[cat],
             label=cat,
-            s=10,
+            s=1,
             alpha=0.7
         )
 
     plt.axvline(
         1,
         linestyle="--",
-        color="black"
+        color="black",
+        linewidth=0.5
     )
 
     plt.axvline(
         -1,
         linestyle="--",
-        color="black"
+        color="black",
+        linewidth=0.5
     )
 
     plt.axhline(
         -np.log10(0.05),
         linestyle="--",
-        color="black"
+        color="black",
+        linewidth=0.5
     )
 
     plt.xlabel("log2 Fold Change")
